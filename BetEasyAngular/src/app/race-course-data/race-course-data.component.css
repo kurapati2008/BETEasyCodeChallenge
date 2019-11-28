@@ -1,0 +1,78 @@
+.example-small-box, .example-large-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  .example-small-box {
+    height: 100px;
+    width: 100px;
+  }
+  
+  .example-large-box {
+    height: 300px;
+    width: 300px;
+  }
+
+  img { width: 30px; height: 30px; }
+
+  .example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+  border-block-color: purple;
+}
+
+.container {
+  position: absolute;
+  left: 10px;
+}
+
+.mat-success {
+  border: 1px solid;
+  border-color: purple;
+}
+
+.mat-success:focus {
+  background-color: purple;
+  color: white;
+}
+
+table {
+  width: 25%;
+}
+
+.panel {
+width: 320px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 150px;
+  padding: 5px;
+}
+
+.jumbotron {
+  width: 340px;
+  padding: 10px;
+  }
+  
+
+.panel-heading {
+  background-color: purple;
+}
+
+.card {
+  width: 18rem; 
+  height: 3rem;
+  place-content: center;
+  background-color: purple;
+  color: white;
+
+}

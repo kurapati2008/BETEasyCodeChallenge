@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+      <div class="column">
+        <img src="assets/logo.PNG" style="width: 100px; height: 80px;">
+      </div>
+      <div class="vl"></div>
+      <div class="column">
+          <img src="assets/racing.PNG" style="width: 100px; height: 80px;">
+      </div>
+    </div>
+
+    <div class="jumbotron">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Next to Jump</div>
+        <div class="panel-body">
+            <div class="example-button-row">
+              <button mat-raised-button [color]="'success'" (click)="filterCourses('')">All</button>
+              <button mat-raised-button [color]="'success'" (click)="filterCourses('Greyhounds')"><img src="assets/Greyhound.PNG"></button>
+              <button mat-raised-button [color]="'success'" (click)="filterCourses('Thoroughbred')"><img src="assets/throughbread.JPG"></button>
+              <button mat-raised-button [color]="'success'" (click)="filterCourses('Trots')"><img src="assets/Trot.JPG"></button>
+              <hr/>
+            </div>
+            <div>
+            <table mat-table [dataSource]="dataSource">
+              <ng-container matColumnDef="EventTypeDesc">
+                <td mat-cell *matCellDef="let element"><img [src]="element.ImageUrl"/></td>
+              </ng-container>
+              <ng-container matColumnDef="Venue">
+                <td mat-cell *matCellDef="let element"> 
+                  <div style="width:150px; word-wrap: break-word">
+                      {{element.Venue.Venue}} <br/>  {{element.EventName}}
+                    </div>
+                  </td>
+                </ng-container>
+                <ng-container matColumnDef="AdvertisedStartTime">
+                  <td mat-cell *matCellDef="let element"> {{element.AdvertisedStartTime | date:'m'}}m {{element.AdvertisedStartTime | date:'s'}}s</td>
+                </ng-container>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
